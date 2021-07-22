@@ -8,3 +8,15 @@ my_dict = {"E": "A", "F": "B", "G": "C", "H": "D", "I": "E",
            "D": "Z", "4": "1", "5": "2", "6": "3",
            "7": "4", "8": "5", "9": "6", "0": "7", "1": "8",
            "2": "9", "3": "0", " ": " "}
+
+input = raw_input
+message = input("Enter Message: ").upper()
+decrypted = ""
+
+for letters in message:
+    if letters in my_dict:
+        decrypted += my_dict[letters]
+    else:
+        decrypted += letters
+
+print(decrypted.lower())
